@@ -1,4 +1,4 @@
-package com.tragent.pressing.service;
+package com.tragent.lte.service;
 
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -7,8 +7,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import com.tragent.pressing.domain.AppUser;
-import com.tragent.pressing.repository.UserRepository;
+import com.tragent.lte.domain.AppUser;
+import com.tragent.lte.repository.UserRepository;
 
 /**
  * Custom UserDetail service

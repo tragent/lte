@@ -1,11 +1,11 @@
-package com.tragent.pressing.repository;
+package com.tragent.lte.repository;
 
 import java.util.Collection;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.query.Param;
 
-import com.tragent.pressing.domain.AppUser;
+import com.tragent.lte.domain.AppUser;
 
 public interface UserRepository extends JpaRepository<AppUser, Long>{
 	

@@ -1,4 +1,4 @@
-package com.tragent.pressing.auth;
+package com.tragent.lte.auth;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -14,8 +14,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import com.tragent.pressing.repository.UserRepository;
-import com.tragent.pressing.service.CustomUserDetailService;
+import com.tragent.lte.repository.UserRepository;
+import com.tragent.lte.service.CustomUserDetailService;
 
 @Configuration
 @EnableWebSecurity

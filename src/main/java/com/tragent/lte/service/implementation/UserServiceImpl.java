@@ -1,4 +1,4 @@
-package com.tragent.pressing.service.implementation;
+package com.tragent.lte.service.implementation;
 
 import java.util.Collection;
 import java.util.List;
@@ -9,9 +9,9 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.tragent.pressing.domain.AppUser;
-import com.tragent.pressing.repository.UserRepository;
-import com.tragent.pressing.service.UserService;
+import com.tragent.lte.domain.AppUser;
+import com.tragent.lte.repository.UserRepository;
+import com.tragent.lte.service.UserService;
 
 @Service
 public class UserServiceImpl implements UserService {

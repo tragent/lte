@@ -1,4 +1,4 @@
-package com.tragent.pressing.controller;
+package com.tragent.lte.api;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.tragent.pressing.domain.AppUser;
-import com.tragent.pressing.service.UserService;
+import com.tragent.lte.domain.AppUser;
+import com.tragent.lte.service.UserService;
 
 import org.springframework.security.core.context.SecurityContextHolder;
 
 @RestController
 @CrossOrigin(origins = "*", methods = { RequestMethod.POST, RequestMethod.GET, RequestMethod.PUT, RequestMethod.DELETE,
 		RequestMethod.OPTIONS })
-@RequestMapping("authenticate")
+@RequestMapping("auth")
 public class AuthenticationController {
 
 	@Autowired

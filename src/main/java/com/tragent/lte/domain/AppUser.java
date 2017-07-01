@@ -1,4 +1,4 @@
-package com.tragent.pressing.domain;
+package com.tragent.lte.domain;
 
 import java.util.List;
 
