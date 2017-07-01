@@ -1,8 +1,8 @@
-package com.tragent.pressing.service;
+package com.tragent.lte.service;
 
 import java.util.Collection;
 
-import com.tragent.pressing.domain.AppUser;
+import com.tragent.lte.domain.AppUser;
 
 /**
  * Service that provides CRUD operations for users

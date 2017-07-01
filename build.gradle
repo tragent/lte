@@ -36,8 +36,12 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-security')
 	compile('org.springframework.boot:spring-boot-starter-aop')
 	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	compile('net.sf.ehcache:ehcache-core:2.6.9') {
         exclude group: 'commons-logging'
     }
+    compile('org.apache.poi:poi:3.11')
+    compile('org.apache.poi:poi-ooxml:3.11')
+    
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }

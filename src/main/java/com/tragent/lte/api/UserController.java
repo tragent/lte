@@ -1,4 +1,4 @@
-package com.tragent.pressing.controller;
+package com.tragent.lte.api;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -16,11 +16,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.tragent.pressing.domain.AppUser;
-import com.tragent.pressing.domain.Role;
-import com.tragent.pressing.domain.UserDTO;
-import com.tragent.pressing.service.RoleService;
-import com.tragent.pressing.service.UserService;
+import com.tragent.lte.domain.AppUser;
+import com.tragent.lte.domain.Role;
+import com.tragent.lte.domain.UserDTO;
+import com.tragent.lte.service.RoleService;
+import com.tragent.lte.service.UserService;
 
 @RestController
 @CrossOrigin(origins = "*", methods = { RequestMethod.POST, RequestMethod.GET, RequestMethod.PUT, RequestMethod.DELETE,

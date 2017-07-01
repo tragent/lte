@@ -1,4 +1,4 @@
-package com.tragent.pressing.domain;
+package com.tragent.lte.domain;
 
 public class CurrentUser {
 	private AppUser appUser;

@@ -1,4 +1,4 @@
-package com.tragent.pressing.service.implementation;
+package com.tragent.lte.service.implementation;
 
 import java.util.Collection;
 
@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Service;
 
-import com.tragent.pressing.domain.Role;
-import com.tragent.pressing.repository.RoleRepository;
-import com.tragent.pressing.service.RoleService;
+import com.tragent.lte.domain.Role;
+import com.tragent.lte.repository.RoleRepository;
+import com.tragent.lte.service.RoleService;
 
 @Service
 @Secured("ROLE_ADMINISTRATION")

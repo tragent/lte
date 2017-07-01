@@ -1,8 +1,8 @@
-package com.tragent.pressing.service;
+package com.tragent.lte.service;
 
 import java.util.Collection;
 
-import com.tragent.pressing.domain.Role;
+import com.tragent.lte.domain.Role;
 
 /** 
  * Service that provides CRUD operations for role 
