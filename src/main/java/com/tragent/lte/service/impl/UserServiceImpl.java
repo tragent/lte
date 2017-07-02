@@ -1,4 +1,4 @@
-package com.tragent.lte.service.implementation;
+package com.tragent.lte.service.impl;
 
 import java.util.Collection;
 import java.util.List;
