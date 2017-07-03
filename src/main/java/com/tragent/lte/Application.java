@@ -26,19 +26,19 @@ public class Application implements CommandLineRunner {
 	@Resource
 	StorageService storageService;
 
-	/*
+	
 	@Bean
 	public WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurerAdapter() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("api/v1/authenticate").allowedOrigins("*");
-				registry.addMapping("api/v1/authenticate").allowedMethods(
+				registry.addMapping("auth").allowedOrigins("*");
+				registry.addMapping("auth").allowedMethods(
 						"RequestMethod.POST, RequestMethod.GET, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS");
 			}
 		};
 	}
-*/
+	
 	@Override
 	public void run(String... args) throws Exception {
 		storageService.deleteAll();
