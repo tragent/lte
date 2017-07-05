@@ -6,6 +6,6 @@ public class X1Data {
 
 	}
 
-	private Long Id;
+	//private Long Id;
 
 }
