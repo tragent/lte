@@ -40,7 +40,7 @@ public class UploadController {
                 .loadAll()
                 .map(path ->
                         MvcUriComponentsBuilder
-                                .fromMethodName(UploadController.class, "serveFile", path.getFileName().toString())
+                                .fromMethodName(UploadController.class, "getListFiles", path.getFileName().toString())
                                 .build().toString())
                 .collect(Collectors.toList()));
 

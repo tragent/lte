@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+//@Configuration
 @Entity
 @Table(name="s1_data")
 public class S1Data {
@@ -30,10 +30,10 @@ public class S1Data {
 	private String wholeSystem;
 
 	@Column(nullable = false)
-	private String s1ModeAverageBearerNumber;
+	private String averageBearerNumber;
 
 	@Column(nullable = false)
-	private String s1ModeMaximumBearerNumber;
+	private String maximumBearerNumber;
 
 	@Column(nullable = false)
 	private String averageDedicatedBearerNumber;
@@ -54,7 +54,7 @@ public class S1Data {
 	private String ipPacketsReceived;
 
 	@Column(nullable = false)
-	private String downlinkMessageKbytesSentInS1Interface;
+	private String downlinkMessageKbytesSentInterface;
 
 	@Column(nullable = false)
 	private String saeBearerSetupRequestTimes;
@@ -63,7 +63,7 @@ public class S1Data {
 	private String saeBearerSetupSuccessTimes;
 
 	@Column(nullable = false)
-	private String uplinkMessageKbytesReceivedInS1Interface;
+	private String uplinkMessageKbytesReceivedInterface;
 
 	@Column(nullable = false)
 	private String realTimePdnConnectionNumber;
@@ -96,13 +96,13 @@ public class S1Data {
 	private String pagingSuccessTimes;
 
 	@Column(nullable = false)
-	private String s1ModePacketPagingRequestTimesPerSubscriber;
+	private String packetPagingRequestTimesPerSubscriber;
 
 	@Column(nullable = false)
-	private String s1ModePacketPagingSuccessRate;
+	private String packetPagingSuccessRate;
 
 	@Column(nullable = false)
-	private String s1ModeAuthenticationRequestTimesPerSubscriber;
+	private String authenticationRequestTimesPerSubscriber;
 
 	@Column(nullable = false)
 	private String securityModeCommandRequestTimes;
@@ -120,25 +120,25 @@ public class S1Data {
 	private String authenticationSuccessTimes;
 
 	@Column(nullable = false)
-	private String s1ModeIntrammeHandoverRequestTimesPerSubscriber;
+	private String intrammeHandoverRequestTimesPerSubscriber;
 
 	@Column(nullable = false)
-	private String s1ModeIntrammeS1HandoverSuccessRate;
+	private String intrammeHandoverSuccessRate;
 
 	@Column(nullable = false)
-	private String intraS1basedHandoverSuccessTimes;
+	private String intraBasedHandoverSuccessTimes;
 
 	@Column(nullable = false)
-	private String intraS1basedHandoverRequestTimes;
+	private String intraBasedHandoverRequestTimes;
 
 	@Column(nullable = false)
-	private String s1ModeIntrammeTauSuccessRate;
+	private String intrammeTauSuccessRate;
 
 	@Column(nullable = false)
-	private String s1ModePeriodicTauRequestTimesPerSubscriber;
+	private String periodicTauRequestTimesPerSubscriber;
 
 	@Column(nullable = false)
-	private String s1ModeIntrammeCombinedTauSuccessRate;
+	private String intrammeCombinedTauSuccessRate;
 
 	@Column(nullable = false)
 	private String periodTauSuccessTimes;
@@ -174,18 +174,18 @@ public class S1Data {
 		this.period = period;
 		this.neName = neName;
 		this.wholeSystem = wholeSystem;
-		this.s1ModeAverageBearerNumber = s1ModeAverageBearerNumber;
-		this.s1ModeMaximumBearerNumber = s1ModeMaximumBearerNumber;
+		this.averageBearerNumber = s1ModeAverageBearerNumber;
+		this.maximumBearerNumber = s1ModeMaximumBearerNumber;
 		this.averageDedicatedBearerNumber = averageDedicatedBearerNumber;
 		this.averagePdnConnectionNumber = averagePdnConnectionNumber;
 		this.maximumPdnConnectionNumber = maximumPdnConnectionNumber;
 		this.averageAttachedUsers = averageAttachedUsers;
 		this.maximumAttachedUsers = maximumAttachedUsers;
 		this.ipPacketsReceived = ipPacketsReceived;
-		this.downlinkMessageKbytesSentInS1Interface = downlinkMessageKbytesSentInS1Interface;
+		this.downlinkMessageKbytesSentInterface = downlinkMessageKbytesSentInS1Interface;
 		this.saeBearerSetupRequestTimes = saeBearerSetupRequestTimes;
 		this.saeBearerSetupSuccessTimes = saeBearerSetupSuccessTimes;
-		this.uplinkMessageKbytesReceivedInS1Interface = uplinkMessageKbytesReceivedInS1Interface;
+		this.uplinkMessageKbytesReceivedInterface = uplinkMessageKbytesReceivedInS1Interface;
 		this.realTimePdnConnectionNumber = realTimePdnConnectionNumber;
 		this.realTimeAttachedUsersAtEcmconnectedStatus = realTimeAttachedUsersAtEcmconnectedStatus;
 		this.realTimeAttachedUsersAtEcmidleStatus = realTimeAttachedUsersAtEcmidleStatus;
@@ -196,21 +196,21 @@ public class S1Data {
 		this.serviceRequestTimes = serviceRequestTimes;
 		this.pagingRequestTimes = pagingRequestTimes;
 		this.pagingSuccessTimes = pagingSuccessTimes;
-		this.s1ModePacketPagingRequestTimesPerSubscriber = s1ModePacketPagingRequestTimesPerSubscriber;
-		this.s1ModePacketPagingSuccessRate = s1ModePacketPagingSuccessRate;
-		this.s1ModeAuthenticationRequestTimesPerSubscriber = s1ModeAuthenticationRequestTimesPerSubscriber;
+		this.packetPagingRequestTimesPerSubscriber = s1ModePacketPagingRequestTimesPerSubscriber;
+		this.packetPagingSuccessRate = s1ModePacketPagingSuccessRate;
+		this.authenticationRequestTimesPerSubscriber = s1ModeAuthenticationRequestTimesPerSubscriber;
 		this.securityModeCommandRequestTimes = securityModeCommandRequestTimes;
 		this.securityModeCommandSuccessRate = securityModeCommandSuccessRate;
 		this.securityModeCommandSuccessTimes = securityModeCommandSuccessTimes;
 		this.authenticationRequestTimes = authenticationRequestTimes;
 		this.authenticationSuccessTimes = authenticationSuccessTimes;
-		this.s1ModeIntrammeHandoverRequestTimesPerSubscriber = s1ModeIntrammeHandoverRequestTimesPerSubscriber;
-		this.s1ModeIntrammeS1HandoverSuccessRate = s1ModeIntrammeS1HandoverSuccessRate;
-		this.intraS1basedHandoverSuccessTimes = intraS1basedHandoverSuccessTimes;
-		this.intraS1basedHandoverRequestTimes = intraS1basedHandoverRequestTimes;
-		this.s1ModeIntrammeTauSuccessRate = s1ModeIntrammeTauSuccessRate;
-		this.s1ModePeriodicTauRequestTimesPerSubscriber = s1ModePeriodicTauRequestTimesPerSubscriber;
-		this.s1ModeIntrammeCombinedTauSuccessRate = s1ModeIntrammeCombinedTauSuccessRate;
+		this.intrammeHandoverRequestTimesPerSubscriber = s1ModeIntrammeHandoverRequestTimesPerSubscriber;
+		this.intrammeHandoverSuccessRate = s1ModeIntrammeS1HandoverSuccessRate;
+		this.intraBasedHandoverSuccessTimes = intraS1basedHandoverSuccessTimes;
+		this.intraBasedHandoverRequestTimes = intraS1basedHandoverRequestTimes;
+		this.intrammeTauSuccessRate = s1ModeIntrammeTauSuccessRate;
+		this.periodicTauRequestTimesPerSubscriber = s1ModePeriodicTauRequestTimesPerSubscriber;
+		this.intrammeCombinedTauSuccessRate = s1ModeIntrammeCombinedTauSuccessRate;
 		this.periodTauSuccessTimes = periodTauSuccessTimes;
 		this.periodTauRequestTimes = periodTauRequestTimes;
 	}
@@ -255,20 +255,20 @@ public class S1Data {
 		this.wholeSystem = wholeSystem;
 	}
 
-	public String getS1ModeAverageBearerNumber() {
-		return s1ModeAverageBearerNumber;
+	public String getAverageBearerNumber() {
+		return averageBearerNumber;
 	}
 
-	public void setS1ModeAverageBearerNumber(String s1ModeAverageBearerNumber) {
-		this.s1ModeAverageBearerNumber = s1ModeAverageBearerNumber;
+	public void setAverageBearerNumber(String s1ModeAverageBearerNumber) {
+		this.averageBearerNumber = s1ModeAverageBearerNumber;
 	}
 
-	public String getS1ModeMaximumBearerNumber() {
-		return s1ModeMaximumBearerNumber;
+	public String getMaximumBearerNumber() {
+		return maximumBearerNumber;
 	}
 
-	public void setS1ModeMaximumBearerNumber(String s1ModeMaximumBearerNumber) {
-		this.s1ModeMaximumBearerNumber = s1ModeMaximumBearerNumber;
+	public void setMaximumBearerNumber(String s1ModeMaximumBearerNumber) {
+		this.maximumBearerNumber = s1ModeMaximumBearerNumber;
 	}
 
 	public String getAverageDedicatedBearerNumber() {
@@ -319,12 +319,12 @@ public class S1Data {
 		this.ipPacketsReceived = ipPacketsReceived;
 	}
 
-	public String getDownlinkMessageKbytesSentInS1Interface() {
-		return downlinkMessageKbytesSentInS1Interface;
+	public String getDownlinkMessageKbytesSentInterface() {
+		return downlinkMessageKbytesSentInterface;
 	}
 
-	public void setDownlinkMessageKbytesSentInS1Interface(String downlinkMessageKbytesSentInS1Interface) {
-		this.downlinkMessageKbytesSentInS1Interface = downlinkMessageKbytesSentInS1Interface;
+	public void setDownlinkMessageKbytesSentInterface(String downlinkMessageKbytesSentInS1Interface) {
+		this.downlinkMessageKbytesSentInterface = downlinkMessageKbytesSentInS1Interface;
 	}
 
 	public String getSaeBearerSetupRequestTimes() {
@@ -343,12 +343,12 @@ public class S1Data {
 		this.saeBearerSetupSuccessTimes = saeBearerSetupSuccessTimes;
 	}
 
-	public String getUplinkMessageKbytesReceivedInS1Interface() {
-		return uplinkMessageKbytesReceivedInS1Interface;
+	public String getUplinkMessageKbytesReceivedInterface() {
+		return uplinkMessageKbytesReceivedInterface;
 	}
 
-	public void setUplinkMessageKbytesReceivedInS1Interface(String uplinkMessageKbytesReceivedInS1Interface) {
-		this.uplinkMessageKbytesReceivedInS1Interface = uplinkMessageKbytesReceivedInS1Interface;
+	public void setUplinkMessageKbytesReceivedInterface(String uplinkMessageKbytesReceivedInS1Interface) {
+		this.uplinkMessageKbytesReceivedInterface = uplinkMessageKbytesReceivedInS1Interface;
 	}
 
 	public String getRealTimePdnConnectionNumber() {
@@ -431,28 +431,28 @@ public class S1Data {
 		this.pagingSuccessTimes = pagingSuccessTimes;
 	}
 
-	public String getS1ModePacketPagingRequestTimesPerSubscriber() {
-		return s1ModePacketPagingRequestTimesPerSubscriber;
+	public String getPacketPagingRequestTimesPerSubscriber() {
+		return packetPagingRequestTimesPerSubscriber;
 	}
 
-	public void setS1ModePacketPagingRequestTimesPerSubscriber(String s1ModePacketPagingRequestTimesPerSubscriber) {
-		this.s1ModePacketPagingRequestTimesPerSubscriber = s1ModePacketPagingRequestTimesPerSubscriber;
+	public void setPacketPagingRequestTimesPerSubscriber(String s1ModePacketPagingRequestTimesPerSubscriber) {
+		this.packetPagingRequestTimesPerSubscriber = s1ModePacketPagingRequestTimesPerSubscriber;
 	}
 
-	public String getS1ModePacketPagingSuccessRate() {
-		return s1ModePacketPagingSuccessRate;
+	public String getPacketPagingSuccessRate() {
+		return packetPagingSuccessRate;
 	}
 
-	public void setS1ModePacketPagingSuccessRate(String s1ModePacketPagingSuccessRate) {
-		this.s1ModePacketPagingSuccessRate = s1ModePacketPagingSuccessRate;
+	public void setPacketPagingSuccessRate(String s1ModePacketPagingSuccessRate) {
+		this.packetPagingSuccessRate = s1ModePacketPagingSuccessRate;
 	}
 
-	public String getS1ModeAuthenticationRequestTimesPerSubscriber() {
-		return s1ModeAuthenticationRequestTimesPerSubscriber;
+	public String getAuthenticationRequestTimesPerSubscriber() {
+		return authenticationRequestTimesPerSubscriber;
 	}
 
-	public void setS1ModeAuthenticationRequestTimesPerSubscriber(String s1ModeAuthenticationRequestTimesPerSubscriber) {
-		this.s1ModeAuthenticationRequestTimesPerSubscriber = s1ModeAuthenticationRequestTimesPerSubscriber;
+	public void setAuthenticationRequestTimesPerSubscriber(String s1ModeAuthenticationRequestTimesPerSubscriber) {
+		this.authenticationRequestTimesPerSubscriber = s1ModeAuthenticationRequestTimesPerSubscriber;
 	}
 
 	public String getSecurityModeCommandRequestTimes() {
@@ -495,61 +495,61 @@ public class S1Data {
 		this.authenticationSuccessTimes = authenticationSuccessTimes;
 	}
 
-	public String getS1ModeIntrammeHandoverRequestTimesPerSubscriber() {
-		return s1ModeIntrammeHandoverRequestTimesPerSubscriber;
+	public String getIntrammeHandoverRequestTimesPerSubscriber() {
+		return intrammeHandoverRequestTimesPerSubscriber;
 	}
 
-	public void setS1ModeIntrammeHandoverRequestTimesPerSubscriber(
+	public void setIntrammeHandoverRequestTimesPerSubscriber(
 			String s1ModeIntrammeHandoverRequestTimesPerSubscriber) {
-		this.s1ModeIntrammeHandoverRequestTimesPerSubscriber = s1ModeIntrammeHandoverRequestTimesPerSubscriber;
+		this.intrammeHandoverRequestTimesPerSubscriber = s1ModeIntrammeHandoverRequestTimesPerSubscriber;
 	}
 
-	public String getS1ModeIntrammeS1HandoverSuccessRate() {
-		return s1ModeIntrammeS1HandoverSuccessRate;
+	public String getIntrammeHandoverSuccessRate() {
+		return intrammeHandoverSuccessRate;
 	}
 
-	public void setS1ModeIntrammeS1HandoverSuccessRate(String s1ModeIntrammeS1HandoverSuccessRate) {
-		this.s1ModeIntrammeS1HandoverSuccessRate = s1ModeIntrammeS1HandoverSuccessRate;
+	public void setIntrammeHandoverSuccessRate(String s1ModeIntrammeS1HandoverSuccessRate) {
+		this.intrammeHandoverSuccessRate = s1ModeIntrammeS1HandoverSuccessRate;
 	}
 
-	public String getIntraS1basedHandoverSuccessTimes() {
-		return intraS1basedHandoverSuccessTimes;
+	public String getIntraBasedHandoverSuccessTimes() {
+		return intraBasedHandoverSuccessTimes;
 	}
 
-	public void setIntraS1basedHandoverSuccessTimes(String intraS1basedHandoverSuccessTimes) {
-		this.intraS1basedHandoverSuccessTimes = intraS1basedHandoverSuccessTimes;
+	public void setIntraBasedHandoverSuccessTimes(String intraS1basedHandoverSuccessTimes) {
+		this.intraBasedHandoverSuccessTimes = intraS1basedHandoverSuccessTimes;
 	}
 
-	public String getIntraS1basedHandoverRequestTimes() {
-		return intraS1basedHandoverRequestTimes;
+	public String getIntraBasedHandoverRequestTimes() {
+		return intraBasedHandoverRequestTimes;
 	}
 
-	public void setIntraS1basedHandoverRequestTimes(String intraS1basedHandoverRequestTimes) {
-		this.intraS1basedHandoverRequestTimes = intraS1basedHandoverRequestTimes;
+	public void setIntraBasedHandoverRequestTimes(String intraS1basedHandoverRequestTimes) {
+		this.intraBasedHandoverRequestTimes = intraS1basedHandoverRequestTimes;
 	}
 
-	public String getS1ModeIntrammeTauSuccessRate() {
-		return s1ModeIntrammeTauSuccessRate;
+	public String getIntrammeTauSuccessRate() {
+		return intrammeTauSuccessRate;
 	}
 
-	public void setS1ModeIntrammeTauSuccessRate(String s1ModeIntrammeTauSuccessRate) {
-		this.s1ModeIntrammeTauSuccessRate = s1ModeIntrammeTauSuccessRate;
+	public void setIntrammeTauSuccessRate(String s1ModeIntrammeTauSuccessRate) {
+		this.intrammeTauSuccessRate = s1ModeIntrammeTauSuccessRate;
 	}
 
-	public String getS1ModePeriodicTauRequestTimesPerSubscriber() {
-		return s1ModePeriodicTauRequestTimesPerSubscriber;
+	public String getPeriodicTauRequestTimesPerSubscriber() {
+		return periodicTauRequestTimesPerSubscriber;
 	}
 
-	public void setS1ModePeriodicTauRequestTimesPerSubscriber(String s1ModePeriodicTauRequestTimesPerSubscriber) {
-		this.s1ModePeriodicTauRequestTimesPerSubscriber = s1ModePeriodicTauRequestTimesPerSubscriber;
+	public void setPeriodicTauRequestTimesPerSubscriber(String s1ModePeriodicTauRequestTimesPerSubscriber) {
+		this.periodicTauRequestTimesPerSubscriber = s1ModePeriodicTauRequestTimesPerSubscriber;
 	}
 
-	public String getS1ModeIntrammeCombinedTauSuccessRate() {
-		return s1ModeIntrammeCombinedTauSuccessRate;
+	public String getIntrammeCombinedTauSuccessRate() {
+		return intrammeCombinedTauSuccessRate;
 	}
 
-	public void setS1ModeIntrammeCombinedTauSuccessRate(String s1ModeIntrammeCombinedTauSuccessRate) {
-		this.s1ModeIntrammeCombinedTauSuccessRate = s1ModeIntrammeCombinedTauSuccessRate;
+	public void setIntrammeCombinedTauSuccessRate(String s1ModeIntrammeCombinedTauSuccessRate) {
+		this.intrammeCombinedTauSuccessRate = s1ModeIntrammeCombinedTauSuccessRate;
 	}
 
 	public String getPeriodTauSuccessTimes() {
