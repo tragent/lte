@@ -11,7 +11,7 @@ import com.tragent.lte.repository.RoleRepository;
 import com.tragent.lte.service.RoleService;
 
 @Service
-@Secured("ROLE_ADMINISTRATION")
+@Secured("ROLE_ADMIN")
 public class RoleServiceImpl implements RoleService {
 	
 	@Autowired

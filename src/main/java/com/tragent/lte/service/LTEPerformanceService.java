@@ -219,59 +219,59 @@ public class LTEPerformanceService {
 								s1Data.setSecurityModeCommandSuccessTimes(cell.getRichStringCellValue().toString());
 							}
 
-							if (cell.getColumnIndex() == 32 && row.getRowNum() >= 8) {
+							if (cell.getColumnIndex() == 32) {
 
 								s1Data.setAuthenticationRequestTimes(cell.getRichStringCellValue().toString());
 							}
 
-							if (cell.getColumnIndex() == 33 && row.getRowNum() >= 8) {
+							if (cell.getColumnIndex() == 33) {
 
 								s1Data.setAuthenticationSuccessTimes(cell.getRichStringCellValue().toString());
 							}
 
-							if (cell.getColumnIndex() == 34 && row.getRowNum() >= 8) {
+							if (cell.getColumnIndex() == 34) {
 
 								s1Data.setIntrammeHandoverRequestTimesPerSubscriber(
 										cell.getRichStringCellValue().toString());
 							}
 
-							if (cell.getColumnIndex() == 35 && row.getRowNum() >= 8) {
+							if (cell.getColumnIndex() == 35) {
 
 								s1Data.setIntrammeHandoverSuccessRate(cell.getRichStringCellValue().toString());
 							}
 
-							if (cell.getColumnIndex() == 36 && row.getRowNum() >= 8) {
+							if (cell.getColumnIndex() == 36) {
 
 								s1Data.setIntraBasedHandoverSuccessTimes(cell.getRichStringCellValue().toString());
 							}
 
-							if (cell.getColumnIndex() == 37 && row.getRowNum() >= 8) {
+							if (cell.getColumnIndex() == 37) {
 
 								s1Data.setIntraBasedHandoverRequestTimes(cell.getRichStringCellValue().toString());
 							}
 
-							if (cell.getColumnIndex() == 38 && row.getRowNum() >= 8) {
+							if (cell.getColumnIndex() == 38) {
 
 								s1Data.setIntrammeTauSuccessRate(cell.getRichStringCellValue().toString());
 							}
 
-							if (cell.getColumnIndex() == 39 && row.getRowNum() >= 8) {
+							if (cell.getColumnIndex() == 39) {
 
 								s1Data.setPeriodicTauRequestTimesPerSubscriber(
 										cell.getRichStringCellValue().toString());
 							}
 
-							if (cell.getColumnIndex() == 40 && row.getRowNum() >= 8) {
+							if (cell.getColumnIndex() == 40) {
 
 								s1Data.setIntrammeCombinedTauSuccessRate(cell.getRichStringCellValue().toString());
 							}
 
-							if (cell.getColumnIndex() == 41 && row.getRowNum() >= 8) {
+							if (cell.getColumnIndex() == 41) {
 
 								s1Data.setPeriodTauSuccessTimes(cell.getRichStringCellValue().toString());
 							}
 
-							if (cell.getColumnIndex() == 42 && row.getRowNum() >= 8) {
+							if (cell.getColumnIndex() == 42) {
 
 								s1Data.setPeriodTauRequestTimes(cell.getRichStringCellValue().toString());
 							}
@@ -280,7 +280,7 @@ public class LTEPerformanceService {
 
 						data.add(s1Data);
 
-					}
+					}	
 					
 				}
 
