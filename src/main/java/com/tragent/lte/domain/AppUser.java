@@ -31,14 +31,12 @@ public class AppUser {
 	@Column(nullable=false, unique=true)
 	private String username;
 	
-	@JsonIgnore
 	@Column(nullable=false)
 	private String password;
 	
 	@Column(nullable=false)
 	private boolean isActive;
 	
-	@JsonIgnore
 	@Column(nullable=false)
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name="user_role", 
