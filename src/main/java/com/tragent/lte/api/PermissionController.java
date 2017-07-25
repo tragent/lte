@@ -15,12 +15,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.tragent.pressing.model.Permission;
-import com.tragent.pressing.service.PermissionService;
+import com.tragent.lte.domain.Permission;
+import com.tragent.lte.service.PermissionService;
 
 @RestController
 @CrossOrigin(origins = "*", methods = {RequestMethod.POST, RequestMethod.GET, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS})
-@RequestMapping("api/v1/permissions")
+@RequestMapping("permissions")
 public class PermissionController {
 
 	@Autowired

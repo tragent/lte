@@ -4,8 +4,11 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
@@ -14,8 +17,6 @@ import org.springframework.security.core.GrantedAuthority;
 @Entity
 @Table(name = "role")
 public class Role implements GrantedAuthority {
-
-	private static final long serialVersionUID = -4479514935005576631L;
 
 	@Id
 	@GeneratedValue
@@ -28,16 +29,22 @@ public class Role implements GrantedAuthority {
 
 	@Column(nullable = false)
 	@ManyToMany(mappedBy = "roles")
-	private List<AppUser> appUsers;
+	private List<AppUser> users;
+
+	@Column(nullable = false)
+	@ManyToMany(fetch = FetchType.EAGER)
+	@JoinTable(name = "role_permission", joinColumns = @JoinColumn(name = "role_id", nullable = false), inverseJoinColumns = @JoinColumn(name = "permission_id", nullable = false))
+	private List<Permission> permissions;
 
 	public Role() {
 		super();
 	}
 
-	public Role(String name, String description) {
+	public Role(String name, String description, List<Permission> permissions) {
 		super();
 		this.name = name;
 		this.description = description;
+		this.permissions = permissions;
 	}
 
 	public Long getId() {
@@ -62,6 +69,14 @@ public class Role implements GrantedAuthority {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public List<Permission> getPermission() {
+		return this.permissions;
+	}
+
+	public void setPermission(List<Permission> permission) {
+		this.permissions = permission;
 	}
 
 	@Override

@@ -2,6 +2,7 @@ package com.tragent.lte.api;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,8 +16,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.tragent.lte.domain.Permission;
 import com.tragent.lte.domain.Role;
 import com.tragent.lte.domain.RoleDTO;
+import com.tragent.lte.service.PermissionService;
 import com.tragent.lte.service.RoleService;
 
 @RestController
@@ -27,6 +30,9 @@ public class RoleController {
 
 	@Autowired
 	private RoleService roleService;
+
+	@Autowired
+	private PermissionService permissionService;
 
 	/**
 	 * Get all roles or role with a given name.
@@ -69,6 +75,23 @@ public class RoleController {
 	}
 
 	/**
+	 * Get all permissions in role.
+	 * 
+	 * @param roleId
+	 * @return Collection of permissions
+	 */
+	@RequestMapping(value = "/{roleId}/permissions", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Collection<Permission>> getRolePermissions(@PathVariable("roleId") Long roleId) {
+
+		Collection<Permission> permissions = roleService.findById(roleId).getPermission();
+		if (permissions == null) {
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		}
+
+		return new ResponseEntity<>(permissions, HttpStatus.OK);
+	}
+
+	/**
 	 * Create new role.
 	 * 
 	 * @param newRole
@@ -76,8 +99,12 @@ public class RoleController {
 	 */
 	@RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Role> createRole(@RequestBody RoleDTO role) {
-
-		Role newRole = new Role(role.getName(), role.getDescription());
+		int count = 0;
+		List<Permission> permissions = new ArrayList<>();
+		while (role.getPermissionIds().size() > count) {
+			permissions.add(permissionService.findById(role.getPermissionIds().get(count++)));
+		}
+		Role newRole = new Role(role.getName(), role.getDescription(), permissions);
 		newRole = roleService.create(newRole);
 		if (newRole == null) {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
@@ -94,10 +121,14 @@ public class RoleController {
 	 */
 	@RequestMapping(value = "/{roleId}", method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Role> updateRole(@RequestBody RoleDTO role) {
-
+		int count = 0;
+		List<Permission> permissions = new ArrayList<>();
+		while (role.getPermissionIds().size() > count) {
+			permissions.add(permissionService.findById(role.getPermissionIds().get(count++)));
+		}
 		Role newRole = roleService.findById(role.getId());
 		newRole.setDescription(role.getDescription());
-
+		newRole.setPermission(permissions);
 		newRole = roleService.create(newRole);
 		newRole = roleService.update(newRole);
 
