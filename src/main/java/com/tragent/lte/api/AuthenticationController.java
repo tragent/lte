@@ -30,7 +30,7 @@ public class AuthenticationController {
 	 * @return Logged in user
 	 */
 	@RequestMapping(method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<AppUser> getCategories() {
+	public ResponseEntity<AppUser> authenticate() {
 
 		AppUser loggedInUser = userService
 				.findByUserName(SecurityContextHolder.getContext().getAuthentication().getName());
