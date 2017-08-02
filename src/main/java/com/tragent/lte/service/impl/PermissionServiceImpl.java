@@ -3,7 +3,6 @@ package com.tragent.lte.service.impl;
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Service;
 
 import com.tragent.lte.domain.Permission;
@@ -11,7 +10,6 @@ import com.tragent.lte.repository.PermissionRepository;
 import com.tragent.lte.service.PermissionService;
 
 @Service
-@Secured("ROLE_ADMIN")
 public class PermissionServiceImpl implements PermissionService {
 
 	@Autowired

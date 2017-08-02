@@ -16,8 +16,6 @@ import com.tragent.lte.domain.S1Data;
 import com.tragent.lte.service.LTEGraphService;
 
 @RestController
-@CrossOrigin(origins = "*", methods = { RequestMethod.POST, RequestMethod.GET, RequestMethod.PUT, RequestMethod.DELETE,
-		RequestMethod.OPTIONS })
 @RequestMapping("s1data")
 public class LTEController {
 

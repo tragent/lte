@@ -6,9 +6,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.springframework.context.annotation.Configuration;
-
-//@Configuration
 @Entity
 @Table(name="s1_data")
 public class S1Data {

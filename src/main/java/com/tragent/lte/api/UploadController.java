@@ -47,7 +47,7 @@ public class UploadController {
         return "uploadForm";
 	}
 
-	@PostMapping("/")
+	@PostMapping("/uploads")
 	public String handleFileUpload(@RequestParam("file") MultipartFile file, Model model) {
 		try {
 			storageService.store(file);
@@ -59,7 +59,7 @@ public class UploadController {
 		} catch (Exception e) {
 			model.addAttribute("message", "FAIL to upload " + file.getOriginalFilename() + "!");
 		}
-		return "uploadForm";
+		return file.getOriginalFilename() + " File Uploaded";
 	}
 
 	@GetMapping("/gellallfiles")

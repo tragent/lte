@@ -4,7 +4,6 @@ import java.util.Collection;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -23,7 +22,6 @@ public class UserServiceImpl implements UserService {
 	PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
 	@Override
-	@Secured("ROLE_ADMIN")
 	public Collection<AppUser> findAll() {
 		
 		List<AppUser> appUsers = userRepository.findAll();
@@ -52,7 +50,6 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	@Secured("ROLE_ADMIN")
 	public AppUser create(AppUser appUser) {
 		
 		if (findByUserName(appUser.getUsername()) != null) {
@@ -72,7 +69,6 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	@Secured("ROLE_ADMIN")
 	public void deactivate(Long id) {
 		
 		AppUser appUser = findById(id);
