@@ -18,8 +18,8 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	private UserRepository userRepository;
 	
-	@Autowired
-	PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+	//@Autowired
+	//PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
 	@Override
 	public Collection<AppUser> findAll() {
@@ -55,7 +55,7 @@ public class UserServiceImpl implements UserService {
 		if (findByUserName(appUser.getUsername()) != null) {
 			return null;
 		}
-		appUser.setPassword(passwordEncoder.encode(appUser.getPassword()));
+		//appUser.setPassword(passwordEncoder.encode(appUser.getPassword()));
 		AppUser savedUser = userRepository.save(appUser);
 		return savedUser;
 	}
@@ -63,7 +63,7 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public AppUser update(AppUser appUser) {
 		
-		appUser.setPassword(passwordEncoder.encode(appUser.getPassword()));
+		//appUser.setPassword(passwordEncoder.encode(appUser.getPassword()));
 		AppUser savedUser = userRepository.save(appUser);
 		return savedUser;
 	}
