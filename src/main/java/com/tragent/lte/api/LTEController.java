@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.tragent.lte.domain.S1Data;
 import com.tragent.lte.service.LTEGraphService;
 
+@CrossOrigin
 @RestController
 @RequestMapping("s1data")
 public class LTEController {
