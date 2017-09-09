@@ -285,7 +285,7 @@ public class LTEPerformanceService {
 				}
 
 				// Need to be more efficient
-				for (int i = 0; i <= 142; i++) {
+				for (int i = 0; i < 142; i++) {
 
 					s1DataRepository.save(data.get(i));
 
